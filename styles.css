@@ -1,0 +1,728 @@
+/* Estilos generales */
+
+@font-face {
+    font-family: 'bernard mt condensed';
+    src: url('bernard-mt-condensed.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'compilerplain-bold-fsp';
+    src: url('compilerplain-bold-fsp.otf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'bernard mt condensed';
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background-color: black;
+}
+
+h1 {
+    text-shadow: -3px -3px 0 black;
+}
+
+h2 {
+    text-shadow: -2px -2px 0 black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+}
+
+p {
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff402;
+    font-size: 40px;
+}
+
+header h1:hover {
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+    text-shadow: -3px -3px 0 black;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff402;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #fff402;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+section {
+    text-align: center;
+    width: 100%;
+}
+
+section h2 {
+    color: #fff402;
+    font-style: italic;
+    font-size: 50px;
+}
+
+section p {
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #3a3a3a;
+    text-align: center;
+    padding: 0;
+    position: block;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+footer p {
+    color: white;
+}
+
+/* Carrusel */
+.carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    height: 750px;
+    box-shadow: 0 .25rem .5rem #21212126;
+    margin: auto;
+    z-index: 9999;
+}
+
+
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    object-fit: cover;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    flex: 1 0 100%;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.dos {
+    height: 50%;
+}
+
+.carr {
+    overflow: hidden;
+    width: 100%;
+    background-color: grey;
+    height: 100%;
+}
+
+.slide {
+    display: flex;
+    transition: transform 2s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    min-width: 100%;
+}
+
+#item1 img:hover {
+    transform: scale(1.20);
+}
+
+#item2 img:hover {
+    transform: scale(1.20);
+}
+
+#item1 img {
+    width: 15%;
+    object-fit: contain;
+    margin: 20px;
+    clip-path: circle(40%);
+}
+
+#item2 img {
+    width: 15%;
+    object-fit: contain;
+    margin: 20px;
+    clip-path: circle(40%);
+}
+
+/* Texto dentro del carrusel */
+.image_text2 {
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 45px;
+    font-weight: bold;
+    color: gainsboro;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 17px;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    text-shadow: -3px -1px 0 black;
+}
+
+.resaltado {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff402;
+
+}
+
+.icono {
+    width: 88px;
+    height: 88px;
+}
+
+.image_text {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 40px;
+    color: gainsboro;
+    margin: 10px;
+    border-radius: 10px;
+    width: 70%;
+    text-align: center;
+    white-space: normal;
+    text-shadow: -3px -1px 0 black;
+}
+
+
+.abajo {
+    background-color: gainsboro;
+    align-items: center;
+    padding-left: 20%;
+}
+
+.texto {
+    width: 800px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.imagen img {
+    width: 80%;
+    padding: 50px 15px;
+}
+
+.imagen1 {
+    margin-left: 40px;
+}
+
+.imagen2 {
+    margin-left: 40px;
+}
+
+.imagen3 {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.servicios {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: grey;
+    display: flex;
+}
+
+.servicios img:hover {
+    background-color: #ffe600;
+    transform: scale(1.09);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.servicios img {
+    clip-path: circle(50%);
+    width: 8cm;
+    height: 8cm;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    background-color: #f0f0f0;
+}
+
+.servicios h2 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.servicios p {
+    font-size: 20px;
+}
+
+.mapa {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: gainsboro;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: black;
+    padding: 20px ;
+}
+
+.parrafoMap {
+    padding-left: 10%;
+}
+
+.map {
+    padding-left: 40px;
+    padding-right: 5%;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+.button_slide {
+    color: white;
+    border: 2px solid #fff402;
+    border-radius: 5px;
+    padding: 10px 33px;
+    display: inline-block;
+    font-family: 'bernard mt condensed';
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #fff402;
+    transition: ease-out 0.4s;
+    margin-bottom: 15px;
+}
+
+.slide_left:hover {
+    box-shadow: inset 0 0 0 50px #fff402;
+    color: black;
+}
+
+.cursor-effect {
+    width: 10px;  /* Ancho de la línea */
+    height: 10px; /* Alto de la línea */
+    background-color: rgba(255, 255, 255, 1); 
+    border-radius: 50px;  /* Bordes redondeados para que parezca una línea redondeada */
+    position: absolute;
+    pointer-events: none; /* Evita que las líneas interfieran con los clics */
+    transform: translate(-50%, -50%); /* Centra el efecto en el cursor */
+    animation: fadeOut 0.5s forwards ease-in-out; /* Animación de desvanecimiento */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para darle un efecto más visible */ 
+    z-index: 9999999;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5); /* Reduce el tamaño mientras se desvanece */
+    }
+}
+
+.text-carrusel2 h2{
+    background-color: grey;
+    font-size: 50px;
+    color: #fff402;
+    text-shadow: -3px -2px 0 black;
+}
+
+.Cont {
+    background-color: #3a3a3a; /* Un gris más oscuro para mejorar el contraste */
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar la sección */
+}
+
+.Cont p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 20px;
+    text-transform: lowercase;
+}
+
+
+.Cont h1{
+    margin: 0;
+    color: #fff402;
+    font-size: 40px;
+}
+
+.Cont h3 {
+    font-family: serif;
+    font-size: 25px;
+    color: white;
+}
+
+.p1 {
+    color: #fff402;
+    max-width: 800px; /* Limita el ancho para que el texto no se extienda demasiado */
+    line-height: 1.6;
+    font-size: 45px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Un poco de espacio entre letras para claridad */
+}
+
+.p2 {
+    color: white;
+    font-size: 20px;
+}
+
+.p3 {
+    color: white;
+    font-size: 20px;
+}
+
+.p4 {
+    color: white;
+    font-size: 20px;
+}
+
+
+.caja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.imagenes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales para las imágenes superiores */
+    grid-template-rows: 1fr 1fr; /* Dos filas */
+    gap: 10px;
+    width: 100%;
+    max-width: 900px; /* Ajusta el ancho máximo del contenedor */
+    margin: 10px;
+}
+
+.imagenes-grid img {
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.perf {
+    width: 100%;
+    height: 100%;
+}
+
+.pri {
+    width: 100%;
+    height: 100%;
+}
+
+.seg {
+    width: 100%;
+    height: 100%;
+}
+
+.ter {
+    width: 100%;
+    height: 100%;
+}
+
+.cuart {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quint {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo para las tres imágenes de arriba */
+.imagenes-grid img:nth-child(1),
+.imagenes-grid img:nth-child(2),
+.imagenes-grid img:nth-child(3) {
+    grid-column: span 1; /* Cada imagen ocupa una columna */
+    grid-row: 1; /* Se ubican en la primera fila */
+    height: 120px; /* Altura controlada */
+}
+
+/* Estilo para las dos imágenes de abajo */
+.imagenes-grid img:nth-child(4),
+.imagenes-grid img:nth-child(5),
+.imagenes-grid img:nth-child(6) {
+    grid-column: span 1; /* Cada imagen ocupa dos columnas */
+    grid-row: 2; /* Se ubican en la segunda fila */
+    height: 120px; /* Altura controlada para hacerlas más largas */
+}
+
+.mailto {
+    color: #fff402;
+    text-shadow: -3px -2px 0 black;
+}
+
+.favicon img{
+    border-radius: 50%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .imagenes-grid {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas pequeñas */
+        grid-template-rows: repeat(3, 1fr); /* Tres filas */
+    }
+
+    /* Ajustar las imágenes en pantallas pequeñas */
+    .imagenes-grid img:nth-child(1),
+    .imagenes-grid img:nth-child(2) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .imagenes-grid img:nth-child(3),
+    .imagenes-grid img:nth-child(4),
+    .imagenes-grid img:nth-child(5) {
+        grid-column: span 2; /* Las últimas tres imágenes ocuparán dos columnas */
+        grid-row: span 1;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .Cont {
+        padding: 40px;
+    }
+
+    .p1 {
+        font-size: 36px;
+    }
+
+    .Cont p {
+        font-size: 16px;
+    }
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 1030px) {
+    header {
+        flex-direction: column; /* Cambia a columna solo en pantallas pequeñas */
+        align-items: center; /* Asegura que el contenido esté centrado horizontalmente */
+    }
+
+    nav ul {
+        flex-direction: row; /* Cambia a fila en dispositivos móviles */
+        margin-top: 10px; /* Espacio entre el título y los botones */
+    }
+
+    nav ul li {
+        margin: 10px 10px; /* Margen vertical en dispositivos móviles */
+    }
+
+    /* Aplica esto a los elementos que se ven mal */
+    .map, .servicios, .caja, .texto, .imagen {
+        width: 100%; /* Asegura que los contenedores ocupen todo el ancho */
+        margin-left: 0; /* Elimina márgenes laterales innecesarios */
+        margin-right: 0; /* Elimina márgenes laterales innecesarios */
+    }
+
+    /* Evita que las imágenes se vean cortadas o demasiado grandes */
+    .imagen img {
+        width: 100%; /* Ajusta las imágenes al 100% del ancho del contenedor */
+        padding: 0; /* Elimina rellenos para evitar desplazamientos o cortes */
+    }
+
+
+    /* Ajustes para la sección de servicios */
+    .servicios {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        padding-top: 30px; /* Espacio superior ajustado */
+    }
+
+    .servicios img {
+        width: 70%; /* Asegúrate de que las imágenes no sean demasiado grandes */
+        margin: 10px auto; /* Centra las imágenes y añade margen */
+    }
+
+    .servicios h2 {
+        font-size: 24px; /* Ajusta el tamaño del texto */
+    }
+
+    .servicios p {
+        font-size: 18px; /* Ajusta el tamaño del párrafo */
+    }
+
+    /* Estilos generales para el mapa */
+    .map {
+        padding: 20px; /* Ajustar el padding del mapa */
+        width: 100%; /* Hacer que el mapa ocupe todo el ancho */
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
+    }
+
+    /* Estilos generales para la sección del mapa */
+    .mapa {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    .parrafoMap {
+        padding-right: 0; /* Quita el padding lateral en móviles */
+        margin-bottom: 20px; /* Añade un margen para separar el párrafo del mapa */
+        text-align: center; /* Centrar el texto en móviles */
+        font-size: 16px; /* Ajustar tamaño del texto */
+    }
+
+    .map iframe {
+        width: 100%; /* Asegura que el iframe ocupe todo el ancho en móviles */
+        height: 300px; /* Ajusta la altura del mapa en dispositivos móviles */
+    }
+
+    .cursor-effect {
+        width: 8px;  /* Ancho del cursor en móviles */
+        height: 8px; /* Alto del cursor en móviles */
+    }
+
+    .image_text{
+        font-size: 50px;
+    }
+
+    .image_text2{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 730px) {
+    .image_text{
+        font-size: 40px;
+    }
+
+    .image_text2{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 520px) {
+    .image_text{
+        font-size: 30px;
+    }
+
+    .image_text2{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 295px) {
+    .image_text{
+        font-size: 20px;
+    }
+
+    .image_text2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 0px) {
+
+    /* Ajusta la alineación del carrusel o contenedores si se ven a la mitad */
+    .carousel {
+        height: 100%; /* Permite que el carrusel se ajuste dinámicamente en altura */
+        width: auto;
+    }
+
+    .carousel-item {
+        height: 100%;
+        width: auto;
+
+    }
+}

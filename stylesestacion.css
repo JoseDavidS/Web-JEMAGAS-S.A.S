@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'bernard mt condensed';
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background-color: black;
+}
+
+h1 {
+    text-shadow: -3px -3px 0 black;
+}
+
+h2 {
+    text-shadow: -3px -3px 0 black;
+}
+
+p {
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff402;
+    font-size: 40px;
+}
+
+header h1:hover {
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+    text-shadow: -3px -3px 0 black;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff402;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #fff402;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.img1{
+    width: 175%;
+    height: 175%;
+    object-fit: cover;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    clip-path: circle(40%);
+}
+
+.icono {
+    width: 88px;
+    height: 88px;
+}
+
+.estaciones {
+    align-items: center;
+    text-align: center;
+    background-color: grey;
+}
+
+.estaciones img{
+    object-fit: cover;
+}
+
+.primera {
+    width: 600px;
+    height: 280px;
+    padding: 20px;
+}
+
+.segunda {
+    width: 600px;
+    height: 280px;
+    padding: 20px;
+}
+
+.tercera {
+    width: 600px;
+    height: 280px;
+    padding: 20px;
+}
+
+.cuarta {
+    width: 600px;
+    height: 280px;
+    padding: 20px;
+}
+
+.quinta {
+    width: 600px;
+    height: 280px;
+    padding: 20px;
+}
+
+.estaciones p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.img2 {
+    width: 50px;
+    height: 50px;
+    margin-left: 48%;
+    display: block;
+}
+
+.Imagen_gral {
+    background-color: gainsboro;
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: space-between;
+}
+
+
+.Imagen_gral p {
+    background-color: gainsboro;
+    padding: 50px;
+    text-align: center;
+    font-size: 60px;
+    color: #fff402;
+    text-shadow: -3px -2px 0 black;
+}
+
+.resaltado {
+    color: #fff402;
+    text-shadow: -3px -2px 0 black;
+}
