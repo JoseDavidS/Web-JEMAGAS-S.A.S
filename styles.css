@@ -40,9 +40,7 @@ header {
     top: 0;
     z-index: 99999;
     background-color: black;
-    opacity: 1;
 }
-
 
 h1 {
     text-shadow: -3px -3px 0 black;
@@ -60,10 +58,6 @@ p {
     text-transform: uppercase;
 }
 
-li a{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 header h1 {
     margin: 0;
     color: #fff402;
@@ -72,7 +66,6 @@ header h1 {
 
 header h1:hover {
     color: white;
-    
 }
 
 header a {
@@ -215,32 +208,32 @@ footer p {
 }
 
 #item1 img:hover {
-    transform: scale(1.10);
+    transform: scale(1.20);
 }
 
 #item2 img:hover {
-    transform: scale(1.10);
+    transform: scale(1.20);
 }
 
 #item1 img {
-    width: 20%;
+    width: 15%;
     object-fit: contain;
-    margin-top: 55px;
+    margin: 20px;
+    clip-path: circle(40%);
 }
 
 #item2 img {
     width: 15%;
     object-fit: contain;
     margin: 20px;
-    clip-path: circle(50%);
+    clip-path: circle(40%);
 }
 
 /* Texto dentro del carrusel */
 .image_text2 {
     position: absolute;
     top: 30%;
-    left: 53%;
-    transform: translate(-100%, -50%);
+    transform: translate(-50%, -50%);
     z-index: 1;
     font-size: 45px;
     font-weight: bold;
@@ -250,7 +243,6 @@ footer p {
     backdrop-filter: blur(5px);
     border-radius: 10px;
     text-shadow: -3px -1px 0 black;
-    font-weight: 90;
 }
 
 .resaltado {
@@ -260,8 +252,8 @@ footer p {
 }
 
 .icono {
-    width: 90px;
-    height: 90px;
+    width: 88px;
+    height: 88px;
 }
 
 .image_text {
@@ -271,16 +263,16 @@ footer p {
     position: absolute;
     top: 60%;
     left: 50%;
-    transform: translate(-67%, -50%);
+    transform: translate(-50%, -50%);
     z-index: 1;
     font-size: 40px;
     color: gainsboro;
+    margin: 10px;
     border-radius: 10px;
     width: 70%;
     text-align: center;
     white-space: normal;
     text-shadow: -3px -1px 0 black;
-    font-weight: 90;
 }
 
 
@@ -329,8 +321,8 @@ footer p {
 
 .servicios img {
     clip-path: circle(50%);
-    width: 9cm;
-    height: 9cm;
+    width: 8cm;
+    height: 8cm;
     transition: background-color 0.5s ease, transform 0.3s ease;
     background-color: #f0f0f0;
 }
@@ -421,13 +413,11 @@ footer p {
     text-shadow: -3px -2px 0 black;
 }
 
-
-
 .Cont {
     background-color: #3a3a3a; /* Un gris más oscuro para mejorar el contraste */
-    padding: 20px;
+    padding: 60px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
     justify-content: center;
     text-align: center;
@@ -441,7 +431,6 @@ footer p {
     color: white;
     font-size: 20px;
     text-transform: lowercase;
-    margin-right: 1000px;
 }
 
 
@@ -449,14 +438,12 @@ footer p {
     margin: 0;
     color: #fff402;
     font-size: 40px;
-    margin-right: 1000px;
 }
 
 .Cont h3 {
     font-family: serif;
     font-size: 25px;
     color: white;
-    margin-right: 1000px;
 }
 
 .p1 {
